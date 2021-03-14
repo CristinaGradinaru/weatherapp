@@ -40,13 +40,4 @@ const displayWeather = (data) => {
     document.querySelector('.degree-low').innerHTML = temp_min;
     document.querySelector('.degree-high').innerHTML = temp_max;
     document.querySelector('.forecast-body').classList.remove('loading');
-};
-
-// document
-// .querySelector('.searchTerm')
-// .addEventListener('keyup', event => {
-//     if (event.key === 'return' ) {
-//         currentWeather.search();
-//     }
-// });
-
+}

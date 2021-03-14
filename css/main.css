@@ -59,10 +59,10 @@
 }
 
 /* CSS For FOOTER */
-.container-fluid {
-    background-color: white;
+.container-fluid1 {
+    background-color: rgba(48, 62, 143, 0.548);
     overflow-x: hidden;
-    color: cornflowerblue;
+    color: white;
 }
 
 
@@ -169,4 +169,11 @@
     font-size: 30px;
     display: inline-flex;
     align-self: left;
+}
+.humidity h3{
+    font-size: 20px;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    align-content: center;
 }
