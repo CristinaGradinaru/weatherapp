@@ -32,8 +32,10 @@ const displayWeather = (data) => {
     let humidity = data.main.humidity
     let temp_min = Math.ceil(data.main.temp_min)
     let temp_max = Math.ceil(data.main.temp_max)
-    console.log(city, icon, description, humidity, temp_max, temp_min)
+    let country= data.sys.country
+    console.log(city, icon, description, humidity, temp_max, temp_min, country)
     document.querySelector('.thecity').innerHTML = "Weather in " + city;
+    document.querySelector('.thecountry').innerHTML = 'country: '+ country;
     document.querySelector('.icon').src = "http://openweathermap.org/img/w/" + icon + ".png";
     document.querySelector('.description').innerHTML = description;
     document.querySelector('.description1').innerHTML = 'Humidity ' + humidity + ' %';
