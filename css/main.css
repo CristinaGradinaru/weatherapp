@@ -5,14 +5,15 @@
 }
 .main-body { 
     /* background: linear-gradient(rgba(47, 149, 163, 0.568), rgba(48, 62, 143, 0.705)) !important; */
-    height: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
     color: whitesmoke;
-    background-image: linear-gradient(rgba(47, 149, 163, 0.568), rgba(48, 62, 143, 0.705)), url('https://images.unsplash.com/photo-1525667218880-145f026b0ad0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1924&q=80');
+    background-image: linear-gradient(rgba(47, 149, 163, 0.815), rgba(48, 62, 143, 0.973)), url('https://source.unsplash.com/1600x900/?nature,water');
+    background-size: 150%;
 } 
 
 .search-bar .search {
@@ -43,6 +44,10 @@
     cursor: pointer;
     font-size: 20px;
   }
+
+.description_box{
+    margin-top: 10%;
+}
 
 /* CSS FOR NAV */
 
@@ -92,7 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 10%;
     font-family: 'Homemade Apple', cursive;
     line-height: 2.5rem;
     margin-bottom: 40px;
@@ -101,6 +106,8 @@
     font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 30px !important;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .main-text strong{
     font-size: 40px;
@@ -114,9 +121,20 @@
     margin: 70px;
     padding: 30px;
     border: gainsboro solid 1px;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: rgba(173, 216, 230, 0.185);
 }
+
+.forecast-body.loading{
+    visibility: hidden;
+}
+
+.forecast-body.loading:after {
+    visibility: visible;
+    content: 'Give me a second...';
+    color: white;
+}
+
 .location, .temperature{
     height: 20vh;
     width: 70%;

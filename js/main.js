@@ -9,14 +9,21 @@ let currentWeather = {
         "&units=imperial&appid=")
         let data = await response.json();
         return displayWeather(data)
+    },
+    const: search= function(){
+        var val = document.getElementById("search-bar").value;
+        console.log(val)
+        currentWeather.fetchWeather(val)
     }
 }
 
-const search = function(){
-    var val = document.getElementById("search-bar").value;
-    console.log(val)
-    currentWeather.fetchWeather(val)
-}
+var input = document.getElementById("search-bar");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    document.getElementById("searchme").click();
+  }
+});
+
 
 const displayWeather = (data) => {
     let city = data.name
@@ -32,5 +39,14 @@ const displayWeather = (data) => {
     document.querySelector('.description1').innerHTML = 'Humidity ' + humidity + ' %';
     document.querySelector('.degree-low').innerHTML = temp_min;
     document.querySelector('.degree-high').innerHTML = temp_max;
+    document.querySelector('.forecast-body').classList.remove('loading');
 };
+
+// document
+// .querySelector('.searchTerm')
+// .addEventListener('keyup', event => {
+//     if (event.key === 'return' ) {
+//         currentWeather.search();
+//     }
+// });
 

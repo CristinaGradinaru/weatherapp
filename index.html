@@ -45,21 +45,22 @@
     <div class="search-bar">
         <div class="search">
            <input type="text" class="searchTerm" id="search-bar" placeholder="your city goes here...">
-           <button type="submit" class="search_button" onclick="search()">
+           <button type="submit" class="search_button" id = 'searchme' onclick="search()">
              <i class="fa fa-search"></i>
           </button>
         </div>
      </div>
 
     <!-- Output Data goes here -->
-    <div class="forecast-body"  >
+    <div class="forecast-body loading"  >
     
         <div class="container">
         <h1 class="thecity">Your city</h1>
         
         </div>
-        <div class="container">
+        <div class="container description_box">
         <img class="icon" src="`${iconurl}`" alt="Icon">
+        <p class= description>It's nice out</p>
         </div>
 
         <div class="container temperature">
@@ -73,8 +74,6 @@
             </div>
     
         </div>
-    
-        <div class="description">It's nice out!</div>
     
         <div class="humidity">
         <h2 class="description1">Humidity</h2>
